@@ -1,0 +1,101 @@
+
+#include "stdafx.h"
+#include "iostream"
+#include <vector>
+#include <string>
+#include <conio.h>
+#include <cstdlib>
+#include <Windows.h>
+using namespace std;
+
+struct Text {
+	string text;
+	int num;
+};
+
+struct achivement{
+	string name;
+	vector <Text> text;
+};
+
+void setcur(int x, int y)//установка курсора на позицию  x y, Вызов: setcur(0, 0);
+{
+	COORD coord;
+	coord.X = x;
+	coord.Y = y;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+};
+
+vector <achivement> achive = { {"", { {"", 0} } } };
+
+void pushback_achive( achivement pushback) {
+	achive.push_back(pushback);
+	return;
+}
+
+void rename(achivement &ach, string Name) {
+	ach.name = Name;
+	return;
+}
+void retext(achivement &ach, string Text, int num_text) {
+	if (num_text >= ach.text.size()) { return; }
+		ach.text[num_text].text = Text;
+	return;
+}
+
+void renum(achivement &ach, int num, int num_text) {
+	if (num_text >= ach.text.size()) { return; }
+	ach.text[num_text].num = num;
+	return;
+}
+void print_achive(achivement ach) {
+	cout << " " << ach.name << endl;
+	int i = 0;
+	while (i < ach.text.size()) {
+		cout << " " << ach.text[i].text;
+		if (ach.text[i].num != 0) {
+			cout << " " << ach.text[i].num << endl;
+		}
+		++i;
+	}
+	return;
+}
+
+void pole() {
+	system("cls");
+	setcur(0, 0);
+	int j = 0;
+	cout << "Enter \t1) - to add new achivement\n\t2) - to rename achivement\n\t3) - to retext achivement\n\t4) - to renum achivement\n\t";
+	while (j < achive.size()) { print_achive(achive[j]); ++j; }
+	return;
+}
+
+
+int main()
+{
+	string name = "";
+	string text = "";
+	int num_ach = 0;
+	int num_text = 0;
+	int num = 0;
+	//Text new_text = { {"", 0} };
+	//vector <Text> new_vector_text = { new_text, new_text };
+	//achivement new_ach = { name , new_vector_text };
+	//pushback_achive( new_ach );
+	//rename(achive[0], "1234");
+	pole();
+	char vvod = _getche();
+	do {
+		pole();
+		if (vvod == '1') { achivement new_ach = { "",{ { "", 0 } } }; pushback_achive(new_ach); while (int j = 0 < achive.size()) { print_achive(achive[j]); ++j; } }
+		if (vvod == '2') { cout << "\nEnter number of achivement :"; cin >> num_ach; cout << "\nEnter new name :"; cin >> name; rename(achive[num_ach - 1], name); }
+		if (vvod == '3') { cout << "\nEnter number of achivement :"; cin >> num_ach; cout << "\nEnter number of text :"; cin >> num_text; cout << "\nEnter new text :"; cin >> text; retext(achive[num_ach - 1], text, num_text - 1); }
+		if (vvod == '4') { cout << "\nEnter number of achivement :"; cin >> num_ach; cout << "\nEnter number of text :"; cin >> num_text; cout << "\nEnter new number :"; cin >> num; renum(achive[num_ach - 1], num, num_text - 1); }
+		vvod = _getche();
+		name = text = "";
+		num_ach = num_text = num = 0;
+	} while (vvod != 'q' || vvod != 'Q');
+		
+	system("pause");
+    return 0;
+}
