@@ -1,0 +1,35 @@
+﻿  Card.cpp
+c:\users\maskit\documents\visual studio 2015\projects\person_3\person_3\card.cpp(257): warning C4018: <: несоответствие типов со знаком и без знака
+  Создание кода...
+c:\users\maskit\documents\visual studio 2015\projects\person_3\person_3\card.cpp(14): warning C4172: возвращение адреса локальной или временной переменной
+c:\users\maskit\documents\visual studio 2015\projects\person_3\person_3\card.cpp(24): warning C4172: возвращение адреса локальной или временной переменной : a
+c:\users\maskit\documents\visual studio 2015\projects\person_3\person_3\card.cpp(29): warning C4172: возвращение адреса локальной или временной переменной : a
+c:\users\maskit\documents\visual studio 2015\projects\person_3\person_3\card.cpp(19): warning C4172: возвращение адреса локальной или временной переменной : a
+c:\users\maskit\documents\visual studio 2015\projects\person_3\person_3\card.cpp(39): warning C4172: возвращение адреса локальной или временной переменной : a
+c:\users\maskit\documents\visual studio 2015\projects\person_3\person_3\card.cpp(34): warning C4172: возвращение адреса локальной или временной переменной : a
+c:\users\maskit\documents\visual studio 2015\projects\person_3\person_3\card.cpp(74): warning C4172: возвращение адреса локальной или временной переменной : a
+c:\users\maskit\documents\visual studio 2015\projects\person_3\person_3\card.cpp(79): warning C4172: возвращение адреса локальной или временной переменной : a
+c:\users\maskit\documents\visual studio 2015\projects\person_3\person_3\card.cpp(84): warning C4172: возвращение адреса локальной или временной переменной : a
+c:\users\maskit\documents\visual studio 2015\projects\person_3\person_3\card.cpp(155): warning C4715: Card::string_to_Race: значение возвращается не при всех путях выполнения
+c:\users\maskit\documents\visual studio 2015\projects\person_3\person_3\card.cpp(193): warning C4715: Card::string_to_Elements: значение возвращается не при всех путях выполнения
+c:\users\maskit\documents\visual studio 2015\projects\person_3\person_3\card.cpp(213): warning C4715: Card::int_to_Character: значение возвращается не при всех путях выполнения
+  Компиляция...
+  Deck.cpp
+  Создание кода...
+  Компиляция...
+  Fighting_card.cpp
+  Создание кода...
+  Компиляция...
+  Fighting_pole.cpp
+  Создание кода...
+  Компиляция...
+  Paint.cpp
+c:\users\maskit\documents\visual studio 2015\projects\person_3\person_3\paint.cpp(27): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\maskit\documents\visual studio 2015\projects\person_3\person_3\paint.cpp(39): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\maskit\documents\visual studio 2015\projects\person_3\person_3\paint.cpp(40): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\maskit\documents\visual studio 2015\projects\person_3\person_3\paint.cpp(52): warning C4018: <: несоответствие типов со знаком и без знака
+  Создание кода...
+  Пропуск... (изменения не обнаружены)
+  Person_3.cpp
+  Person_3.vcxproj -> C:\Users\Maskit\documents\visual studio 2015\Projects\Person_3\Debug\Person_3.exe
+  Person_3.vcxproj -> C:\Users\Maskit\documents\visual studio 2015\Projects\Person_3\Debug\Person_3.pdb (Full PDB)
